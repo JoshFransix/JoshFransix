@@ -45,7 +45,6 @@
 <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="26" height="26"/>
 
 <br />
-<br />
 
 ## [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=joshfransix&theme=prussian)](https://git.io/streak-stats)
 
