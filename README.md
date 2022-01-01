@@ -42,11 +42,12 @@
 
 <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="26" height="26"/>
 
-<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="26" height="26"/>
-
-<br />
+</br>
+</br>
 
 ## [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=joshfransix&theme=prussian)](https://git.io/streak-stats)
+
+</br>
 
 <!-- ![](https://komarev.com/ghpvc/?username=JoshFransix) -->
 
@@ -56,19 +57,15 @@
 
 </details>
 
-<details>
-  <summary>:zap: GitHub Stats</summary>
+<!-- <details>
+  <summary>GitHub Stats</summary>
 
-  <img align="left" alt="codeSTACKr's GitHub Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=codeSTACKr&show_icons=true&hide_border=true" />
 
-</details>
+
+</details> -->
 
 [website]: https://joshfransix.netlify.app
 [twitter]: https://twitter.com/joshfransix
 [youtube]: https://youtube.com/FransixWeb
 [instagram]: https://instagram.com/josh.fransixx
 [linkedin]: https://linkedin.com/in/joshfransix
-[webdevplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAJ0WbEsFA9W3I1W-g_BTsbt
-[jsplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALRJKu7wfXby3MKeflhTu6B
-[cssplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrALSdvZuEh6gqQdmDoDIoqz4
-[reactplaylist]: https://www.youtube.com/playlist?list=PLkwxH9e_vrAK4TdffpxKY3QGyHCpxFcQ0
