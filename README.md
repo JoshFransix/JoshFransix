@@ -43,7 +43,6 @@
 <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="26" height="26"/>
 
 </br>
-</br>
 
 ## Github Stats
 
