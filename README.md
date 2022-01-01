@@ -45,13 +45,17 @@
 </br>
 </br>
 
-## [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=joshfransix&theme=prussian)](https://git.io/streak-stats)
+## Github Stats
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=joshfransix&theme=prussian)](https://git.io/streak-stats)
 
 </br>
 
 <!-- ![](https://komarev.com/ghpvc/?username=JoshFransix) -->
 
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=joshfransix&show_icons=true&theme=cobalt)](https://github.com/anuraghazra/github-readme-stats)
+
+<!-- [![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes) -->
 
 <!--END_SECTION:activity-->
 
