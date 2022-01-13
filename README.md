@@ -5,8 +5,8 @@
 
 ## I'm a Developer
 
-- 🥶 I’m currently learning everything 😂
-- 👯 I’m looking to collaborate with devs on projects
+- 🥶 I’m currently sharpening my react skill
+- 👯 I’m looking to collaborate with devs on frontend projects
 - 🥅 Everyday Goal: Contribute more to Open Source projects.
 - ⚡ Fun fact: I love gaming
 
