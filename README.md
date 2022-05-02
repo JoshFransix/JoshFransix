@@ -1,5 +1,6 @@
 ### Hi there, I'm [ Joshua Fransix ][website] 👋
 ![image title](https://rushter.com/counter.svg)
+![Profile views](https://gpvc.arturio.dev/[joshfransix])
 
 [![Website](https://img.shields.io/website?label=josh_fransix&style=for-the-badge&url=https%3A%2F%2Fcodestackr.com)](https://joshfransix.netlify.app)
 [![Twitter Follow](https://img.shields.io/twitter/follow/joshfransix?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2Fjoshfransix&screen_name=joshfransix)
