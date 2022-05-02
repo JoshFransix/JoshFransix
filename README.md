@@ -10,8 +10,6 @@
 - 🥅 Everyday Goal: Contribute more to Open Source projects.
 - ⚡ Fun fact: I love gaming
 
-<hr/>
-
 ### Connect with me:
 
 [<img align="left" alt="joshfransix" width="22px" src="https://joshfransix.netlify.app//media/img/testLogo44.png"  target="blank"/>][website]
