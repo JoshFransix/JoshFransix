@@ -10,13 +10,15 @@
 - 🥅 Everyday Goal: Contribute more to Open Source projects.
 - ⚡ Fun fact: I love gaming
 
+<hr/>
+
 ### Connect with me:
 
-[<img align="left" alt="joshfransix" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"  target="blank"/>][website]
-[<img align="left" alt="joshfransix | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="joshfransix | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="joshfransix | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="joshfransix | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+[<img align="left" alt="joshfransix" width="22px" src="https://joshfransix.netlify.app//media/img/testLogo44.png"  target="blank"/>][website]
+[<img align="left" alt="FransixWeb" width="22px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png"  target="blank"/>][website]
+[<img align="left" alt="joshfransix | Twitter" width="22px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png" />][twitter]
+[<img align="left" alt="joshfransix | LinkedIn" width="22px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png" />][linkedin]
+[<img align="left" alt="joshfransix | Instagram" width="22px" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png" />][instagram]
 
 <br />
 
