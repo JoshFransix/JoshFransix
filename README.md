@@ -1,4 +1,4 @@
-### Hi there, I'm [ Joshua Fransix ][website] 👋
+## Hi there, I'm [ Joshua Fransix ][website] 👋
 
 ![Profile views](https://gpvc.arturio.dev/joshfransix)
 
