@@ -51,6 +51,6 @@ export const skills: SkillGroup[] = [
   {
     category: 'Blockchain',
     skills: ['Solidity', 'Smart Contracts', 'Web3.js'],
-  },
+  }
 ];
 

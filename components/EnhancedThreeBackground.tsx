@@ -49,7 +49,7 @@ function FloatingParticles() {
   // Use darker color and higher opacity for light mode for better contrast
   const particleColor = isDark ? "#3b82f6" : "#1e40af";
   const particleOpacity = isDark ? 0.8 : 0.95;
-  const particleSize = isDark ? 0.01 : 0.015;
+  const particleSize = isDark ? 0.02 : 0.02;
 
   const material = useMemo(
     () => (
@@ -198,8 +198,8 @@ export function EnhancedThreeBackground() {
           color="#3b82f6"
         />
         <FloatingParticles />
-        <GeometricShapes />
-        <InteractiveSphere />
+        {/* <GeometricShapes /> */}
+        {/* <InteractiveSphere /> */}
       </Canvas>
     </div>
   );
