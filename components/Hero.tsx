@@ -33,7 +33,7 @@ export function Hero() {
             duration: 0.8,
             ease: "power3.out",
           },
-          index * 0.2
+          index * 0.2,
         );
       });
     }
@@ -59,9 +59,8 @@ export function Hero() {
           I'm a Web Engineer.
         </h2>
         <p className="hero-description text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-          I build scalable, interactive products across frontend and backend,
-          focusing on maintainability, performance, and exceptional user
-          experiences.
+          I build scalable web applications — from polished frontends to
+          reliable backends and CMS-driven sites.
         </p>
         <div className="hero-cta">
           <Link

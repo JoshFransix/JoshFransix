@@ -13,7 +13,7 @@ export function ProjectsSection() {
 
   return (
     <div className="space-y-12">
-      {/* Featured Projects - Grid on desktop, column on mobile */}
+      {/* Featured Projects */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {featuredProjects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />

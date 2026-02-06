@@ -69,7 +69,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50",
         isScrolled
           ? "bg-background/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
       style={{
         borderBottom: isScrolled
@@ -100,10 +100,10 @@ export function Navbar() {
                 href={link.href}
                 onClick={handleNavClick}
                 className={cn(
-                  "text-sm font-medium transition-colors relative",
+                  "text-sm font-medium transition-colors relative transition-el",
                   activeSection === link.href.slice(1)
                     ? "text-accent"
-                    : "text-muted hover:text-foreground"
+                    : "text-muted hover:text-foreground",
                 )}
               >
                 {link.label}
@@ -194,7 +194,7 @@ export function Navbar() {
                       "block text-base font-medium transition-colors py-2",
                       activeSection === link.href.slice(1)
                         ? "text-accent"
-                        : "text-muted hover:text-foreground"
+                        : "text-muted hover:text-foreground",
                     )}
                   >
                     {link.label}

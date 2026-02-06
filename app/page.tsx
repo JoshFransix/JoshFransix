@@ -52,7 +52,7 @@ export default function Home() {
         id="skills"
         title="Skills"
         subtitle="02."
-        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
+        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-16"
         show3D={true}
       >
         <TechStack />
@@ -63,7 +63,7 @@ export default function Home() {
         id="projects"
         title="Projects"
         subtitle="03."
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-16"
       >
         <ProjectsSection />
       </Section>
@@ -73,7 +73,7 @@ export default function Home() {
         id="contact"
         title="Get In Touch"
         subtitle="04."
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-16"
       >
         <div className="space-y-8">
           <div className="text-center">
