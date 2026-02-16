@@ -62,7 +62,7 @@ function FloatingParticles() {
         opacity={particleOpacity}
       />
     ),
-    [isDark, particleColor, particleOpacity, particleSize]
+    [isDark, particleColor, particleOpacity, particleSize],
   );
 
   return (
@@ -198,8 +198,8 @@ export function EnhancedThreeBackground() {
           color="#3b82f6"
         />
         <FloatingParticles />
-        <GeometricShapes />
-        <InteractiveSphere />
+        {/* <GeometricShapes /> */}
+        {/* <InteractiveSphere /> */}
       </Canvas>
     </div>
   );
