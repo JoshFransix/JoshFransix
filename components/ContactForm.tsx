@@ -28,23 +28,31 @@ export function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    const form = e.currentTarget;
-    const formDataToSend = new FormData(form);
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+
+    // Log what we're sending for debugging
+    const params = new URLSearchParams(formData as any);
+    console.log("Submitting to Netlify:", params.toString());
 
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as any).toString(),
+        body: params.toString(),
       });
 
-      if (response.ok) {
+      console.log("Response status:", response.status);
+
+      if (response.ok || response.status === 200) {
         setSubmitStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
+        console.error("Response not OK:", response.status, response.statusText);
         setSubmitStatus("error");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -56,6 +64,7 @@ export function ContactForm() {
       <form
         name="contact"
         method="POST"
+        action="/"
         data-netlify="true"
         data-netlify-recaptcha="true"
         onSubmit={handleSubmit}

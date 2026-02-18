@@ -5,10 +5,11 @@
 </head>
 <body>
   <!-- This file ensures Netlify detects the form at build time -->
-  <form name="contact" netlify hidden>
+  <form name="contact" netlify netlify-recaptcha hidden>
     <input type="text" name="name" />
     <input type="email" name="email" />
     <textarea name="message"></textarea>
+    <div data-netlify-recaptcha="true"></div>
   </form>
 </body>
 </html>
