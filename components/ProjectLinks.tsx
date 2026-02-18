@@ -25,7 +25,7 @@ export function ProjectLinks({ links, className }: ProjectLinksProps) {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-muted hover:text-accent border border-border rounded-lg hover:border-accent transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-muted hover:text-accent border border-border rounded-lg hover:border-accent transition-el"
           >
             <IconComponent className="w-4 h-4" />
             <span>{link.label}</span>

@@ -167,7 +167,7 @@ export const projects: Project[] = [
       "Socket.io",
       "Zustand",
       "Recharts",
-      "Express",
+      "NestJS",
       "Tailwind CSS",
     ],
     links: [
@@ -227,17 +227,22 @@ export const projects: Project[] = [
     description:
       "A sleek and user-friendly web application for capturing and organizing thoughts, tasks, and ideas effortlessly.",
     role: "Full-stack Developer",
-    techStack: ["Nuxt.js", "Vuetify", "Tailwind CSS", "Pinia", "EmailJS"],
+    techStack: ["Nuxt.js", "Vuetify", "Tailwind CSS", "Pinia", "EmailJS", "NestJS","PostgreSQL"],
     links: [
+      {
+        label: "Live Demo",
+        url: "https://jotloom.netlify.app",
+        icon: "external-link",
+      },
       {
         label: "Frontend",
         url: "https://github.com/JoshFransix/Jotloom",
         icon: "github",
       },
       {
-        label: "Live Demo",
-        url: "https://jotloom.netlify.app",
-        icon: "external-link",
+        label: "Backend",
+        url: "https://github.com/JoshFransix/Jotloom-backend",
+        icon: "github",
       },
     ],
     featured: true,

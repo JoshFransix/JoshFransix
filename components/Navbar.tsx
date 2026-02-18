@@ -69,7 +69,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50",
         isScrolled
           ? "bg-background/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
       style={{
         borderBottom: isScrolled
@@ -100,10 +100,10 @@ export function Navbar() {
                 href={link.href}
                 onClick={handleNavClick}
                 className={cn(
-                  "text-sm font-medium transition-colors relative",
+                  "text-sm font-medium transition-el relative",
                   activeSection === link.href.slice(1)
                     ? "text-accent"
-                    : "text-muted hover:text-foreground"
+                    : "text-muted hover:text-foreground",
                 )}
               >
                 {link.label}
@@ -117,6 +117,14 @@ export function Navbar() {
                 )}
               </Link>
             ))}
+            <a
+              href="https://docs.google.com/document/d/e/2PACX-1vTLexrj5-915g6phZR6C4rrnzsBYfnPjJUzxa2_-oszdtl4dm_NWsz1t4JnSqOndezeH2f1YNbcz6QE/pub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-accent border border-accent px-4 py-2 rounded-md hover:bg-accent hover:text-white transition-colors duration-300"
+            >
+              Resume
+            </a>
             <ThemeToggle />
           </div>
 
@@ -194,13 +202,30 @@ export function Navbar() {
                       "block text-base font-medium transition-colors py-2",
                       activeSection === link.href.slice(1)
                         ? "text-accent"
-                        : "text-muted hover:text-foreground"
+                        : "text-muted hover:text-foreground",
                     )}
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: navLinks.length * 0.1, duration: 0.2 }}
+              >
+                <a
+                  href="https://docs.google.com/document/d/e/2PACX-1vTLexrj5-915g6phZR6C4rrnzsBYfnPjJUzxa2_-oszdtl4dm_NWsz1t4JnSqOndezeH2f1YNbcz6QE/pub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    setTimeout(() => setIsMobileMenuOpen(false), 100)
+                  }
+                  className="block text-base font-medium text-accent border border-accent px-4 py-2 rounded-md hover:bg-accent hover:text-white transition-colors duration-300 text-center"
+                >
+                  Resume
+                </a>
+              </motion.div>
             </motion.div>
           </motion.div>
         )}

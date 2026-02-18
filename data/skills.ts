@@ -32,6 +32,8 @@ export const skills: SkillGroup[] = [
       "GraphQL",
       "PostgreSQL",
       "MongoDB",
+      "Prisma",
+      "Redis"
     ],
   },
   {

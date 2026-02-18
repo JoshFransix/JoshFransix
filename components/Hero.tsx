@@ -19,10 +19,7 @@ export function Hero() {
         heroRef.current.querySelector(".hero-cta"),
       ].filter(Boolean) as Element[];
 
-      // Set initial state
-      gsap.set(elements, { opacity: 0, y: 20 });
-
-      // Animate in
+      // Animate in from initial state set by CSS classes
       const tl = gsap.timeline();
       elements.forEach((el, index) => {
         tl.to(
@@ -33,7 +30,7 @@ export function Hero() {
             duration: 0.8,
             ease: "power3.out",
           },
-          index * 0.2
+          index * 0.2,
         );
       });
     }
@@ -49,35 +46,28 @@ export function Hero() {
         ref={heroRef}
         className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
-        <p className="hero-greeting text-accent font-mono text-sm md:text-base mb-4">
+        <p className="hero-greeting text-accent font-mono text-sm md:text-base mb-4 opacity-0 translate-y-5">
           Hello, my name is
         </p>
-        <h1 className="hero-name text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4">
+        <h1 className="hero-name text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 opacity-0 translate-y-5">
           Joshua Fransix.
         </h1>
-        <h2 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-foreground/80 mb-6">
+        <h2 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-foreground/80 mb-6 opacity-0 translate-y-5">
           I'm a Web Engineer.
         </h2>
-        <p className="hero-description text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="hero-description text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 translate-y-5">
           I build scalable, interactive products across frontend and backend,
           focusing on maintainability, performance, and exceptional user
           experiences.
         </p>
-        <div className="hero-cta">
-          <Link
-            href="#contact"
+        <div className="hero-cta opacity-0 translate-y-5">
+          <a
+            href="mailto:joshfransix@gmail.com"
             className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              const contact = document.getElementById("contact");
-              if (contact) {
-                contact.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-            }}
           >
             <Mail className="w-5 h-5" />
             Get In Touch
-          </Link>
+          </a>
         </div>
       </div>
     </section>
