@@ -10,10 +10,12 @@ export function ContactForm() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -122,7 +124,7 @@ export function ContactForm() {
 
         {submitStatus === "success" && (
           <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-500 text-sm">
-            Message sent successfully! I'll get back to you soon.
+            Message sent successfully! I&apos;ll get back to you soon.
           </div>
         )}
 
@@ -153,4 +155,3 @@ export function ContactForm() {
     </div>
   );
 }
-

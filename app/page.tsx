@@ -26,21 +26,21 @@ export default function Home() {
       >
         <div className="prose prose-invert max-w-none">
           <p className="text-lg text-muted leading-relaxed mb-6">
-            I'm a Web Engineer with a passion for building scalable,
+            I&apos;m a Web Engineer with a passion for building scalable,
             maintainable products. I approach development with a focus on clean
             architecture, performance optimization, and delivering exceptional
             user experiences.
           </p>
           <p className="text-lg text-muted leading-relaxed mb-6">
-            Over the years, I've worked across the stack—from crafting
+            Over the years, I&apos;ve worked across the stack—from crafting
             interactive frontend interfaces to designing robust backend systems.
-            I believe in writing code that's not just functional, but
+            I believe in writing code that&apos;s not just functional, but
             maintainable and scalable for the long term.
           </p>
           <p className="text-lg text-muted leading-relaxed">
-            I'm particularly interested in the intersection of design and
+            I&apos;m particularly interested in the intersection of design and
             engineering, ensuring that beautiful interfaces are backed by solid
-            technical foundations. Whether it's optimizing bundle sizes,
+            technical foundations. Whether it&apos;s optimizing bundle sizes,
             improving API response times, or enhancing user interactions, I
             enjoy solving problems that make a real difference.
           </p>
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="space-y-8">
           <div className="text-center">
             <p className="text-lg text-muted leading-relaxed">
-              I'm always open to discussing new opportunities, interesting
+              I&apos;m always open to discussing new opportunities, interesting
               projects, or just having a conversation about web development.
               Feel free to reach out!
             </p>

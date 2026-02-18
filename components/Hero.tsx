@@ -53,7 +53,7 @@ export function Hero() {
           Joshua Fransix.
         </h1>
         <h2 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-foreground/80 mb-6 opacity-0 translate-y-5">
-          I'm a Web Engineer.
+          I&apos;m a Web Engineer.
         </h2>
         <p className="hero-description text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 translate-y-5">
           {/* I build scalable, interactive products across frontend and backend,

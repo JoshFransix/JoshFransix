@@ -62,7 +62,7 @@ function FloatingParticles() {
         opacity={particleOpacity}
       />
     ),
-    [isDark, particleColor, particleOpacity, particleSize],
+    [particleColor, particleOpacity, particleSize],
   );
 
   return (
