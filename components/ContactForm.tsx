@@ -7,6 +7,7 @@ import { useEffect, useState, Suspense } from "react";
 function ContactFormContent() {
   const searchParams = useSearchParams();
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (searchParams.get("success") === "true") {
@@ -17,6 +18,37 @@ function ContactFormContent() {
 
   const handleClose = () => {
     setShowSuccess(false);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      // Trigger your popup
+      setShowSuccess(true);
+
+      // Reset form fields
+      form.reset();
+
+      // Clean URL
+      window.history.replaceState({}, "", "/#contact");
+    } catch (error) {
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,12 +87,21 @@ function ContactFormContent() {
       <form
         name="contact"
         method="POST"
-        action="/?success=true#contact"
         data-netlify="true"
         data-netlify-recaptcha="true"
+        netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
         className="space-y-6"
       >
+        {/* Required for Netlify */}
         <input type="hidden" name="form-name" value="contact" />
+
+        {/* Honeypot */}
+        <p hidden>
+          <label>
+            Don’t fill this out: <input name="bot-field" />
+          </label>
+        </p>
 
         <div>
           <label
@@ -113,14 +154,16 @@ function ContactFormContent() {
           />
         </div>
 
+        {/* Netlify reCAPTCHA */}
         <div data-netlify-recaptcha="true"></div>
 
         <button
           type="submit"
-          className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors"
+          disabled={isSubmitting}
+          className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
         >
           <Send className="w-5 h-5" />
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
     </>
