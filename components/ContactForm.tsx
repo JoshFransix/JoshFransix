@@ -2,16 +2,15 @@
 
 import { Send, CheckCircle, X } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 
-export function ContactForm() {
+function ContactFormContent() {
   const searchParams = useSearchParams();
   const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     if (searchParams.get("success") === "true") {
       setShowSuccess(true);
-      // Clean up the URL
       window.history.replaceState({}, "", "/#contact");
     }
   }, [searchParams]);
@@ -21,7 +20,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <>
       {/* Success Popup */}
       {showSuccess && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
@@ -124,6 +123,36 @@ export function ContactForm() {
           Send Message
         </button>
       </form>
+    </>
+  );
+}
+
+export function ContactForm() {
+  return (
+    <div className="w-full max-w-2xl mx-auto">
+      <Suspense fallback={<ContactFormFallback />}>
+        <ContactFormContent />
+      </Suspense>
     </div>
+  );
+}
+
+function ContactFormFallback() {
+  return (
+    <form className="space-y-6 animate-pulse">
+      <div>
+        <div className="h-4 w-24 bg-border rounded mb-2"></div>
+        <div className="h-12 bg-border rounded"></div>
+      </div>
+      <div>
+        <div className="h-4 w-24 bg-border rounded mb-2"></div>
+        <div className="h-12 bg-border rounded"></div>
+      </div>
+      <div>
+        <div className="h-4 w-24 bg-border rounded mb-2"></div>
+        <div className="h-32 bg-border rounded"></div>
+      </div>
+      <div className="h-12 bg-border rounded"></div>
+    </form>
   );
 }
