@@ -6,6 +6,7 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     category: "Frontend",
+    category: "Frontend",
     skills: [
       "React",
       "Next.js",
@@ -32,9 +33,12 @@ export const skills: SkillGroup[] = [
       "GraphQL",
       "PostgreSQL",
       "MongoDB",
+      "Prisma",
+      "Redis"
     ],
   },
   {
+    category: "Tools & Infrastructure",
     category: "Tools & Infrastructure",
     skills: [
       "Git",
@@ -46,8 +50,21 @@ export const skills: SkillGroup[] = [
       "Netlify",
       "WordPress",
       "Salesforce",
+      "Git",
+      "Webpack",
+      "Vite",
+      "Docker",
+      "AWS",
+      "Vercel",
+      "Netlify",
+      "WordPress",
+      "Salesforce",
     ],
   },
+  // {
+  //   category: 'Blockchain',
+  //   skills: ['Solidity', 'Smart Contracts', 'Web3.js'],
+  // },
   // {
   //   category: 'Blockchain',
   //   skills: ['Solidity', 'Smart Contracts', 'Web3.js'],
