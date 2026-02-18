@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #0a0a0a;
@@ -47,12 +45,10 @@ body {
     color 0.3s ease;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 .transition-el {
   transition: all 0.3s ease-in-out;
+}
+
+.text-balance {
+  text-wrap: balance;
 }

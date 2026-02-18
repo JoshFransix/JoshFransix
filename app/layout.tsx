@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { HeroUIProvider } from "@heroui/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -81,7 +82,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <HeroUIProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </HeroUIProvider>
       </body>
     </html>
   );

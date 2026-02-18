@@ -190,13 +190,13 @@ export function EnhancedThreeBackground() {
         dpr={[1, 2]}
         className="opacity-100"
       >
-        <ambientLight intensity={0.8} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
-        <pointLight
+        {/* <ambientLight intensity={0.8} /> */}
+        {/* <pointLight position={[10, 10, 10]} intensity={1} /> */}
+        {/* <pointLight
           position={[-10, -10, -10]}
           intensity={0.6}
           color="#3b82f6"
-        />
+        /> */}
         <FloatingParticles />
         {/* <GeometricShapes /> */}
         {/* <InteractiveSphere /> */}
