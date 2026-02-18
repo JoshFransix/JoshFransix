@@ -86,7 +86,7 @@ export default function Home() {
 
           <ContactForm />
 
-          <div className="flex items-center justify-center gap-6 pt-8 border-t border-border">
+          {/* <div className="flex items-center justify-center gap-6 pt-8 border-t border-border">
             {socialLinks.map((social) => {
               const IconComponent = getIcon(social.icon as IconName);
               if (!IconComponent) return null;
@@ -104,7 +104,7 @@ export default function Home() {
                 </Link>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </Section>
 
