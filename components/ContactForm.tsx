@@ -1,13 +1,62 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { Send, CheckCircle, X } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function ContactForm() {
+  const searchParams = useSearchParams();
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  useEffect(() => {
+    if (searchParams.get("success") === "true") {
+      setShowSuccess(true);
+      // Clean up the URL
+      window.history.replaceState({}, "", "/#contact");
+    }
+  }, [searchParams]);
+
+  const handleClose = () => {
+    setShowSuccess(false);
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto">
+      {/* Success Popup */}
+      {showSuccess && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+          <div className="relative bg-background border border-border rounded-lg p-6 max-w-md w-full shadow-2xl">
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 text-muted hover:text-foreground transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center">
+                <CheckCircle className="w-8 h-8 text-green-500" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">
+                Message Sent!
+              </h3>
+              <p className="text-muted">
+                Thank you for reaching out! I&apos;ll get back to you soon.
+              </p>
+              <button
+                onClick={handleClose}
+                className="px-6 py-2 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <form
         name="contact"
         method="POST"
+        action="/?success=true#contact"
         data-netlify="true"
         data-netlify-recaptcha="true"
         className="space-y-6"
