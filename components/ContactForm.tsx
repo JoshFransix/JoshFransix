@@ -1,73 +1,15 @@
 "use client";
 
-import { useState, FormEvent } from "react";
 import { Send } from "lucide-react";
 
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    const myForm = e.currentTarget;
-    const formData = new FormData(myForm);
-
-    // Log what we're sending for debugging
-    const params = new URLSearchParams(formData as any);
-    console.log("Submitting to Netlify:", params.toString());
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString(),
-      });
-
-      console.log("Response status:", response.status);
-
-      if (response.ok || response.status === 200) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        console.error("Response not OK:", response.status, response.statusText);
-        setSubmitStatus("error");
-      }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="w-full max-w-2xl mx-auto">
       <form
         name="contact"
         method="POST"
-        action="/"
         data-netlify="true"
         data-netlify-recaptcha="true"
-        onSubmit={handleSubmit}
         className="space-y-6"
       >
         <input type="hidden" name="form-name" value="contact" />
@@ -84,8 +26,6 @@ export function ContactForm() {
             id="name"
             name="name"
             required
-            value={formData.name}
-            onChange={handleChange}
             className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="John Doe"
           />
@@ -103,8 +43,6 @@ export function ContactForm() {
             id="email"
             name="email"
             required
-            value={formData.email}
-            onChange={handleChange}
             className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="john@example.com"
           />
@@ -122,8 +60,6 @@ export function ContactForm() {
             name="message"
             required
             rows={6}
-            value={formData.message}
-            onChange={handleChange}
             className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
             placeholder="Hello, I'd like to discuss..."
           />
@@ -131,35 +67,12 @@ export function ContactForm() {
 
         <div data-netlify-recaptcha="true"></div>
 
-        {submitStatus === "success" && (
-          <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-500 text-sm">
-            Message sent successfully! I&apos;ll get back to you soon.
-          </div>
-        )}
-
-        {submitStatus === "error" && (
-          <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 text-sm">
-            Something went wrong. Please try again or email me directly at
-            joshfransix@gmail.com
-          </div>
-        )}
-
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors"
         >
-          {isSubmitting ? (
-            <>
-              <span className="animate-spin">⏳</span>
-              Sending...
-            </>
-          ) : (
-            <>
-              <Send className="w-5 h-5" />
-              Send Message
-            </>
-          )}
+          <Send className="w-5 h-5" />
+          Send Message
         </button>
       </form>
     </div>
