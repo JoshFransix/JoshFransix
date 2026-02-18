@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Mail, Send } from "lucide-react";
+import { Send } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -130,7 +130,8 @@ export function ContactForm() {
 
         {submitStatus === "error" && (
           <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 text-sm">
-            Something went wrong. Please try again or email me directly.
+            Something went wrong. Please try again or email me directly at
+            joshfransix@gmail.com
           </div>
         )}
 
