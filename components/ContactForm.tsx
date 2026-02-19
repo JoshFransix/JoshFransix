@@ -26,26 +26,29 @@ function ContactFormContent() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
 
     try {
-      await fetch("/", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/json",
         },
-        body: new URLSearchParams(formData as any).toString(),
+        body: JSON.stringify(data),
       });
 
-      // Trigger your popup
+      if (!res.ok) throw new Error("Failed to send message");
+
       setShowSuccess(true);
-
-      // Reset form fields
       form.reset();
-
-      // Clean URL
       window.history.replaceState({}, "", "/#contact");
     } catch (error) {
       console.error("Form submission error:", error);
+      alert("There was an error sending your message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -84,24 +87,7 @@ function ContactFormContent() {
         </div>
       )}
 
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-        netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
-        className="space-y-6"
-      >
-        {/* Required for Netlify */}
-        <input type="hidden" name="form-name" value="contact" />
-
-        {/* Honeypot */}
-        <p hidden>
-          <label>
-            Don’t fill this out: <input name="bot-field" />
-          </label>
-        </p>
+      <form onSubmit={handleSubmit} className="space-y-6">
 
         <div>
           <label
@@ -154,8 +140,7 @@ function ContactFormContent() {
           />
         </div>
 
-        {/* Netlify reCAPTCHA */}
-        <div data-netlify-recaptcha="true"></div>
+        {/* ...existing code... */}
 
         <button
           type="submit"
