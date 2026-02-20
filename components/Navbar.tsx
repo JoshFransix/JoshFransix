@@ -118,7 +118,7 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href="https://docs.google.com/document/d/e/2PACX-1vTLexrj5-915g6phZR6C4rrnzsBYfnPjJUzxa2_-oszdtl4dm_NWsz1t4JnSqOndezeH2f1YNbcz6QE/pub"
+              href="https://docs.google.com/document/d/1ruBfpbhEYCSFGpVQF0Ma_-pFfLsCgaNhj81QjI6yMy4/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-accent border border-accent px-4 py-2 rounded-md hover:bg-accent hover:text-white transition-colors duration-300"
@@ -215,7 +215,7 @@ export function Navbar() {
                 transition={{ delay: navLinks.length * 0.1, duration: 0.2 }}
               >
                 <a
-                  href="https://docs.google.com/document/d/e/2PACX-1vTLexrj5-915g6phZR6C4rrnzsBYfnPjJUzxa2_-oszdtl4dm_NWsz1t4JnSqOndezeH2f1YNbcz6QE/pub"
+                  href="https://docs.google.com/document/d/1ruBfpbhEYCSFGpVQF0Ma_-pFfLsCgaNhj81QjI6yMy4/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
