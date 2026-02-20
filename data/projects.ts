@@ -105,6 +105,41 @@ export const projects: Project[] = [
     featured: false,
   },
   {
+    id: "webonix",
+    title: "Webonix",
+    description:
+      "Real-time web performance monitoring observatory that tracks Core Web Vitals including LCP, INP, CLS, FCP, and TTFB. Features live metrics updates via WebSocket, historical analytics, performance charts, and customizable alert thresholds.",
+    role: "Full-stack Engineer",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Socket.io",
+      "Zustand",
+      "Recharts",
+      "NestJS",
+      "Tailwind CSS",
+    ],
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://webonix-frontend.vercel.app/",
+        icon: "external-link",
+      },
+      {
+        label: "Frontend",
+        url: "https://github.com/JoshFransix/webonix-frontend",
+        icon: "github",
+      },
+      {
+        label: "Backend",
+        url: "https://github.com/JoshFransix/webonix-backend",
+        icon: "github",
+      },
+    ],
+    featured: false,
+  },
+  {
     id: "ydev-academy",
     title: "Ydev Academy",
     description:
@@ -149,41 +184,6 @@ export const projects: Project[] = [
       {
         label: "Backend",
         url: "https://github.com/JoshFransix/bluledger-backend",
-        icon: "github",
-      },
-    ],
-    featured: true,
-  },
-  {
-    id: "webonix",
-    title: "Webonix",
-    description:
-      "Real-time web performance monitoring observatory that tracks Core Web Vitals including LCP, INP, CLS, FCP, and TTFB. Features live metrics updates via WebSocket, historical analytics, performance charts, and customizable alert thresholds.",
-    role: "Full-stack Engineer",
-    techStack: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Socket.io",
-      "Zustand",
-      "Recharts",
-      "NestJS",
-      "Tailwind CSS",
-    ],
-    links: [
-      {
-        label: "Live Demo",
-        url: "https://webonix-frontend.vercel.app/",
-        icon: "external-link",
-      },
-      {
-        label: "Frontend",
-        url: "https://github.com/JoshFransix/webonix-frontend",
-        icon: "github",
-      },
-      {
-        label: "Backend",
-        url: "https://github.com/JoshFransix/webonix-backend",
         icon: "github",
       },
     ],
@@ -243,6 +243,22 @@ export const projects: Project[] = [
         label: "Backend",
         url: "https://github.com/JoshFransix/Jotloom-backend",
         icon: "github",
+      },
+    ],
+    featured: true,
+  },
+  {
+    id: "flex-it",
+    title: "iBloov flex-it",
+    description:
+      "Real-time donation and fundraising platform that gamifies event contributions through live leaderboards and cashless gifting. Enables users to collect funds instantly via QR code scanning with instant payouts, bank-level security, and competitive rankings.",
+    role: "Frontend Developer",
+    techStack: ["Next.js", "Lucide", "Tailwind CSS", "Typescript", "Framer", "Radix UI", "Zustand"],
+    links: [
+      {
+        label: "Live Demo",
+        url: "https://flex.ibloov.com",
+        icon: "external-link",
       },
     ],
     featured: true,
