@@ -87,7 +87,7 @@ export const projects: Project[] = [
     id: "linar-studios",
     title: "Linar Studios",
     description:
-      "A leading African 3D animation studio specializing in bringing indigenous African stories to life through world-class animation",
+      "Showcase platform for a leading African 3D animation studio specializing in bringing indigenous African stories to life. Includes a full-featured admin system for managing blog content, portfolio pieces, and studio information with a modern, responsive frontend and robust backend API.",
     role: "Full Stack Developer",
     techStack: ["Next.js", "Tailwind CSS", "Framer", "NestJS", "PostgreSQL"],
     links: [
