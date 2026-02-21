@@ -68,6 +68,30 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+  id: "cloudenly",
+  title: "Cloudenly",
+  description:
+    "A cloud-based business and analytics platform that helps organizations manage operations, monitor performance metrics, and gain actionable insights through data-driven dashboards and reporting tools.",
+  role: "Frontend Engineer",
+  techStack: [
+    "Nuxt.js",
+    "Vue.js",
+    "Vuetify",
+    "Google Analytics (GA4)",
+    "Google Tag Manager",
+    "AWS (S3, CloudFront)",
+    "Webpack"
+  ],
+  links: [
+    {
+      label: "Live Platform",
+      url: "https://cloudenly.com",
+      icon: "external-link",
+    },
+  ],
+  featured: true,
+},
+  {
     id: "corniehealth",
     title: "CornieHealth",
     description:
@@ -261,7 +285,7 @@ export const projects: Project[] = [
         icon: "external-link",
       },
     ],
-    featured: true,
+    featured: false,
   },
   {
     id: "github-finder",
